@@ -17,14 +17,22 @@ class Encryptor
       cipher[lowercase_letter]
     end
   
+
+    # def encrypt(string)
+    #   letters = string.split("")
+    #   results = []
+    #   letters.collect do |letter|
+    #     encrypted_letter = encrypt_letter(letter)
+    #     results.push(encrypted_letter)
+    #   end
+    #   results.join
+    # end
+
+    
     def encrypt(string)
-      letters = string.split("")
-      results = []
-      letters.each do |letter|
-        encrypted_letter = encrypt_letter(letter)
-        results.push(encrypted_letter)
-      end
-      results.join
+        letters = string.split("")
+        results = letters.collect {|letter| encrypt_letter(letter)}
+        results.join
     end
     
 end 
