@@ -16,23 +16,22 @@ class Encryptor
       lowercase_letter = letter.downcase
       cipher[lowercase_letter]
     end
+    
+    def decrypt_letter(letter)
+        lowercase_letter = letter.downcase
+        cipher.key(lowercase_letter)
+    end 
   
 
-    # def encrypt(string)
-    #   letters = string.split("")
-    #   results = []
-    #   letters.collect do |letter|
-    #     encrypted_letter = encrypt_letter(letter)
-    #     results.push(encrypted_letter)
-    #   end
-    #   results.join
-    # end
-
-    
     def encrypt(string)
         letters = string.split("")
         results = letters.collect {|letter| encrypt_letter(letter)}
         results.join
+    end
+    
+    def decrypt(string)
+        letters = string.split("")
+        re
     end
     
 end 
