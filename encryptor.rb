@@ -31,7 +31,8 @@ class Encryptor
     
     def decrypt(string)
         letters = string.split("")
-        re
+        results = letters.collect {|letter| decrypt_letter(letter)}
+        results.join
     end
     
 end 
