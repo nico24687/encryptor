@@ -26,9 +26,9 @@ class Encryptor
         results.join
     end
     
-    def decrypt(string)
+    def decrypt(string,rotation)
         letters = string.split("")
-        results = letters.collect {|letter| decrypt_letter(letter)}
+        results = letters.collect {|letter| decrypt_letter(letter,rotation)}
         results.join
     end
     
