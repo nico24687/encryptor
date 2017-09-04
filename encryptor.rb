@@ -20,9 +20,9 @@ class Encryptor
     end 
   
 
-    def encrypt(string)
+    def encrypt(string,rotation)
         letters = string.split("")
-        results = letters.collect {|letter| encrypt_letter(letter)}
+        results = letters.collect {|letter| encrypt_letter(letter,rotation)}
         results.join
     end
     
