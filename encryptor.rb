@@ -14,9 +14,9 @@ class Encryptor
       cipher_for_rotation[letter]
     end
     
-    def decrypt_letter(letter)
-        lowercase_letter = letter.downcase
-        cipher.key(lowercase_letter)
+    def decrypt_letter(letter,rotation)
+        cipher_for_rotation = cipher(rotation)
+        cipher_for_rotation.key(letter)
     end 
   
 
